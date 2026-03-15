@@ -1,0 +1,74 @@
+$date
+	Sun Mar  8 13:36:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 32 ! rd2 [31:0] $end
+$var wire 32 " rd1 [31:0] $end
+$var reg 4 # A1 [3:0] $end
+$var reg 4 $ A2 [3:0] $end
+$var reg 4 % A3 [3:0] $end
+$var reg 32 & R15 [31:0] $end
+$var reg 32 ' WD3 [31:0] $end
+$var reg 1 ( WE3 $end
+$var reg 1 ) clk $end
+$scope module regfile1 $end
+$var wire 4 * A1 [3:0] $end
+$var wire 4 + A2 [3:0] $end
+$var wire 4 , A3 [3:0] $end
+$var wire 32 - R15 [31:0] $end
+$var wire 32 . WD3 [31:0] $end
+$var wire 1 ( WE3 $end
+$var wire 1 ) clk $end
+$var reg 32 / read_data1 [31:0] $end
+$var reg 32 0 read_data2 [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 0
+bx /
+b10011 .
+bx -
+b11 ,
+b1100 +
+b1010 *
+0)
+0(
+b10011 '
+bx &
+b11 %
+b1100 $
+b1010 #
+bx "
+bx !
+$end
+#5
+1)
+#6
+b110001 '
+b110001 .
+1(
+#7
+b1100 %
+b1100 ,
+#10
+0)
+#15
+b110001 !
+b110001 0
+1)
+#20
+0)
+#25
+1)
+#27
