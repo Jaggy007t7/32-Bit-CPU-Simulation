@@ -1,0 +1,126 @@
+$date
+	Sat Mar  7 18:56:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 1 ! zero $end
+$var wire 32 " result [31:0] $end
+$var wire 1 # overflow $end
+$var wire 1 $ negative $end
+$var wire 1 % carry $end
+$var reg 32 & a [31:0] $end
+$var reg 32 ' b [31:0] $end
+$var reg 2 ( sel [1:0] $end
+$scope module alu1 $end
+$var wire 32 ) a [31:0] $end
+$var wire 32 * b [31:0] $end
+$var wire 2 + sel [1:0] $end
+$var wire 1 ! zero $end
+$var parameter 32 , A $end
+$var parameter 32 - B $end
+$var parameter 32 . c $end
+$var parameter 32 / d $end
+$var reg 1 % carry $end
+$var reg 1 $ negative $end
+$var reg 1 # overflow $end
+$var reg 32 0 result [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 /
+b10 .
+b1 -
+b0 ,
+$end
+#0
+$dumpvars
+b0 0
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+0$
+0#
+b0 "
+1!
+$end
+#10
+b101 '
+b101 *
+b1010 &
+b1010 )
+#20
+0!
+b11100 "
+b11100 0
+b1 (
+b1 +
+b1000 '
+b1000 *
+b10100 &
+b10100 )
+#30
+b11111111111111111111111111111111 "
+b11111111111111111111111111111111 0
+b10 (
+b10 +
+b1111000011110000111100001111 '
+b1111000011110000111100001111 *
+b11110000111100001111000011110000 &
+b11110000111100001111000011110000 )
+#40
+b1010101010101001010101010101011 "
+b1010101010101001010101010101011 0
+b11 (
+b11 +
+b1010101010101011010101010101010 '
+b1010101010101011010101010101010 *
+b10101010101010100101010101010101 &
+b10101010101010100101010101010101 )
+#50
+b10001001000100001000100000 "
+b10001001000100001000100000 0
+b0 (
+b0 +
+b10000111011001010100001100100001 '
+b10000111011001010100001100100001 *
+b10010001101000101011001111000 &
+b10010001101000101011001111000 )
+#60
+b1111 "
+b1111 0
+b1 (
+b1 +
+b1010 '
+b1010 *
+b101 &
+b101 )
+#70
+b101 "
+b101 0
+b10 (
+b10 +
+b100 '
+b100 *
+b1 &
+b1 )
+#80
+b1110 "
+b1110 0
+b11 (
+b11 +
+b10 '
+b10 *
+b10000 &
+b10000 )
+#90
