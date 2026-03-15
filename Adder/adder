@@ -1,0 +1,63 @@
+#! /usr/local/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x7fae22f06200 .scope module, "testbench" "testbench" 2 3;
+ .timescale -9 -9;
+v0x6000025fca20_0 .var "a", 31 0;
+v0x6000025fcab0_0 .var "b", 31 0;
+v0x6000025fcb40_0 .net "sum", 31 0, L_0x6000026fc0a0;  1 drivers
+S_0x7fae22f045d0 .scope module, "add1" "adder" 2 7, 3 2 0, S_0x7fae22f06200;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /OUTPUT 32 "sum";
+L_0x7fae24063050 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x6000025fc510_0 .net *"_ivl_10", 0 0, L_0x7fae24063050;  1 drivers
+v0x6000025fc5a0_0 .net *"_ivl_11", 32 0, L_0x6000026fc280;  1 drivers
+v0x6000025fc630_0 .net *"_ivl_3", 32 0, L_0x6000026fc140;  1 drivers
+L_0x7fae24063008 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x6000025fc6c0_0 .net *"_ivl_6", 0 0, L_0x7fae24063008;  1 drivers
+v0x6000025fc750_0 .net *"_ivl_7", 32 0, L_0x6000026fc1e0;  1 drivers
+v0x6000025fc7e0_0 .net "a", 31 0, v0x6000025fca20_0;  1 drivers
+v0x6000025fc870_0 .net "b", 31 0, v0x6000025fcab0_0;  1 drivers
+v0x6000025fc900_0 .net "carry", 0 0, L_0x6000026fc000;  1 drivers
+v0x6000025fc990_0 .net "sum", 31 0, L_0x6000026fc0a0;  alias, 1 drivers
+L_0x6000026fc000 .part L_0x6000026fc280, 32, 1;
+L_0x6000026fc0a0 .part L_0x6000026fc280, 0, 32;
+L_0x6000026fc140 .concat [ 32 1 0 0], v0x6000025fca20_0, L_0x7fae24063008;
+L_0x6000026fc1e0 .concat [ 32 1 0 0], v0x6000025fcab0_0, L_0x7fae24063050;
+L_0x6000026fc280 .arith/sum 33, L_0x6000026fc140, L_0x6000026fc1e0;
+    .scope S_0x7fae22f06200;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "adder_testbench.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fae22f06200 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x7fae22f06200;
+T_1 ;
+    %delay 0, 0;
+    %pushi/vec4 54, 0, 32;
+    %store/vec4 v0x6000025fca20_0, 0, 32;
+    %pushi/vec4 55, 0, 32;
+    %store/vec4 v0x6000025fcab0_0, 0, 32;
+    %delay 5, 0;
+    %pushi/vec4 3, 0, 32;
+    %store/vec4 v0x6000025fca20_0, 0, 32;
+    %pushi/vec4 7, 0, 32;
+    %store/vec4 v0x6000025fcab0_0, 0, 32;
+    %delay 5, 0;
+    %vpi_call 2 16 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "adder_testbench.v";
+    "adder.v";

@@ -1,0 +1,42 @@
+$date
+	Sat Mar  7 21:57:44 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 32 ! sum [31:0] $end
+$var reg 32 " a [31:0] $end
+$var reg 32 # b [31:0] $end
+$scope module add1 $end
+$var wire 32 $ a [31:0] $end
+$var wire 32 % b [31:0] $end
+$var wire 32 & sum [31:0] $end
+$var wire 1 ' carry $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0'
+b1101101 &
+b110111 %
+b110110 $
+b110111 #
+b110110 "
+b1101101 !
+$end
+#5
+b1010 !
+b1010 &
+b111 #
+b111 %
+b11 "
+b11 $
+#10
